@@ -32,8 +32,7 @@ export const postOneTodo = function (request: any, response: any) {
 	}
 
 	/* Create JSON object of new item */
-	const newItem = {
-		id: "",
+	const newItem: Record<string, unknown> = {
 		title: request.body.title, 
 		body: request.body.body,
 		createdAt: new Date().toISOString()
@@ -43,8 +42,27 @@ export const postOneTodo = function (request: any, response: any) {
 	db.collection("todos")
 	.add(newItem)
 	.then((doc) => {
-		const responseItem = newItem;
+		let responseItem = newItem;
 		responseItem.id = doc.id;
 		return response.json(responseItem);
 	})
+};
+
+export const deleteTodo = async(request: any, response: any) => {
+	console.log(request.params);
+	const givenId: number = request.params.id;
+	console.log(givenId);
+
+	/* This is a ref to the document obj */
+	const toDeleteDoc = db.doc(`/todos/${givenId}`);
+
+	/* this actually gets the value of the doc (async) */
+	const toDeleteValue = await toDeleteDoc.get();
+
+	if (!toDeleteValue.exists) {
+		return response.status(404).json({error: `${givenId} not found!`})
+	}
+	toDeleteDoc.delete();
+
+	return response.status(200).json({Success: `${givenId} was deleted!`});
 };

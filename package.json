@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@firebase/firestore": "^3.4.7",
+    "@firebase/firestore-types": "^2.5.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "express": "^4.17.3",
+    "firebase": "^9.6.10",
     "firebase-admin": "^10.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -23,7 +26,7 @@
     "extends": [
       "react-app",
       "react-app/jest",
-	  "eslint:recommended"
+      "eslint:recommended"
     ]
   },
   "browserslist": {
