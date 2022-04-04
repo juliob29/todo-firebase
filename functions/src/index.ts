@@ -1,7 +1,7 @@
 import * as functions from "firebase-functions";
 import * as app from "express";
 
-import {getAllTodos, postOneTodo, deleteTodo} from "./APIs/todos";
+import {getAllTodos, postOneTodo, deleteTodo, editTodo} from "./APIs/todos";
 
 
 // // Start writing Firebase Functions
@@ -15,6 +15,7 @@ const webApp = app();
 webApp.get("/todos", getAllTodos);
 webApp.post("/todo", postOneTodo);
 webApp.delete("/delete/:id", deleteTodo);
+webApp.put("/edit/:id", editTodo);
 
 
 /* This will make it so that firebase will serve the web application! */

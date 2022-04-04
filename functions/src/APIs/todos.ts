@@ -49,9 +49,7 @@ export const postOneTodo = function (request: any, response: any) {
 };
 
 export const deleteTodo = async(request: any, response: any) => {
-	console.log(request.params);
 	const givenId: number = request.params.id;
-	console.log(givenId);
 
 	/* This is a ref to the document obj */
 	const toDeleteDoc = db.doc(`/todos/${givenId}`);
@@ -66,3 +64,22 @@ export const deleteTodo = async(request: any, response: any) => {
 
 	return response.status(200).json({Success: `${givenId} was deleted!`});
 };
+
+/* JSON body will tell us what they want to edit */
+export const editTodo = async(request: any, response: any) => {
+	if (request.body.todoId || request.body.createdAt){
+        return response.status(403).json({message: 'Not allowed to edit'});
+    }
+
+	const givenId: number = request.params.id;
+	let document = db.doc(`/todos/${givenId}`);
+
+	const docValue = await document.get();
+	if (!docValue.exists) {
+        return response.status(403).json({message: 'Document does not exist'});
+	}
+
+	await document.update(request.body); // steal JSON from request - use that
+	return response.status(200).json({Success: "Updated Successfully!"});
+}
+
