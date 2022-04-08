@@ -1,4 +1,3 @@
-import {admin, db} from "../util/admin";
 import {firebaseConfig} from "../util/admin";
 import * as firebase from "firebase/app";
 import { validateLoginRequest } from "../util/validators";
@@ -11,13 +10,19 @@ and this is just for... user login? */
 firebase.initializeApp(firebaseConfig);
 
 const loginUser = async (request:any, response: any) => {
+	console.log("loginUser is running...");
 
 	let loginRequest = {
-		email: request.params.email,
-		password: request.params.password
+		email: request.body.email,
+		password: request.body.password
 	}
+	console.log(loginRequest);
 
 	let {errors, valid} = validateLoginRequest(loginRequest);
+
+	console.log(errors);
+	console.log(valid);
+
 
 	if (!valid)
 		return response.status(400).json({errors});
@@ -28,7 +33,8 @@ const loginUser = async (request:any, response: any) => {
 	const auth = getAuth()
 	try {
 		let signInStatus = await signInWithEmailAndPassword(auth, loginRequest.email, loginRequest.password);
-		return response.json(signInStatus.user.getIdToken());
+		let token: string = await signInStatus.user.getIdToken();
+		return response.json(token);
 	} catch (e) {
 		return response.status(403).json({general: "Wrong Credentials! Try again."})
 	}

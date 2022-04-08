@@ -12,8 +12,8 @@ const firebaseConfig = {
   measurementId: "G-5C5RVX5ZN1"
 };
 
+admin.initializeApp(); // This should always come first
 const db = admin.firestore();
-admin.initializeApp();
 
 export {firebaseConfig, db, admin};
 

@@ -1,4 +1,7 @@
 const isEmpty = (str: string) => {
+	if (!str) 
+		return true;
+
 	if (str.trim() === '') return true;
 	return false;
 }
