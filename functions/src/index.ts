@@ -2,6 +2,7 @@ import * as functions from "firebase-functions";
 import * as app from "express";
 
 import {getAllTodos, postOneTodo, deleteTodo, editTodo} from "./APIs/todos";
+import {loginUser} from "./APIs/users";
 
 
 // // Start writing Firebase Functions
@@ -13,7 +14,10 @@ const webApp = app();
 
 /* This will attach getAllTodos to the /todos endpoint */
 webApp.get("/todos", getAllTodos);
+
 webApp.post("/todo", postOneTodo);
+webApp.post("/login", loginUser);
+
 webApp.delete("/delete/:id", deleteTodo);
 webApp.put("/edit/:id", editTodo);
 
