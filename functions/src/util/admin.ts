@@ -1,6 +1,4 @@
 import * as admin from "firebase-admin";
-
-/* Used to get the API key from .env */
 import * as dotenv from "dotenv";
 dotenv.config();
 
