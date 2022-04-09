@@ -1,0 +1,342 @@
+[debug] [2022-04-09T21:13:56.727Z] ----------------------------------------------------------------------
+[debug] [2022-04-09T21:13:56.728Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2022-04-09T21:13:56.729Z] CLI Version:   10.5.0
+[debug] [2022-04-09T21:13:56.729Z] Platform:      linux
+[debug] [2022-04-09T21:13:56.729Z] Node Version:  v17.8.0
+[debug] [2022-04-09T21:13:56.730Z] Time:          Sat Apr 09 2022 14:13:56 GMT-0700 (Pacific Daylight Time)
+[debug] [2022-04-09T21:13:56.730Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-09T21:13:56.733Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-04-09T21:13:56.816Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-09T21:13:56.816Z] > authorizing via signed-in user (julioballista@gmail.com)
+[debug] [2022-04-09T21:13:56.816Z] [iam] checking project todo-e0f41 for permissions ["firebase.projects.get"]
+[debug] [2022-04-09T21:13:56.817Z] > refreshing access token with scopes: []
+[debug] [2022-04-09T21:13:56.817Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-09T21:13:56.914Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sat, 09 Apr 2022 21:13:57 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-09T21:13:56.920Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/todo-e0f41:testIamPermissions [none]
+[debug] [2022-04-09T21:13:56.921Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/todo-e0f41:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-04-09T21:13:56.972Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-04-09T21:13:56.972Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-04-09T21:13:57.041Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/todo-e0f41:testIamPermissions 200
+[debug] [2022-04-09T21:13:57.041Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/todo-e0f41:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-04-09T21:13:57.042Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todo-e0f41 [none]
+[debug] [2022-04-09T21:13:57.200Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todo-e0f41 200
+[debug] [2022-04-09T21:13:57.201Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todo-e0f41 {"projectId":"todo-e0f41","projectNumber":"301771672350","displayName":"ToDo","name":"projects/todo-e0f41","resources":{"hostingSite":"todo-e0f41","realtimeDatabaseInstance":"todo-e0f41-default-rtdb","storageBucket":"todo-e0f41.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from '/home/juliob/programs/todo-app'...
+[info] 
+[warn] ⚠  Your requested "node" version "16" doesn't match your global version "17". Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"17\". Using node@17 from host."}}
+[debug] [2022-04-09T21:13:57.210Z] defaultcredentials: writing to file /home/juliob/.config/firebase/julioballista_gmail_com_application_default_credentials.json
+[debug] [2022-04-09T21:13:57.211Z] Setting GAC to /home/juliob/.config/firebase/julioballista_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/juliob/.config/firebase/julioballista_gmail_com_application_default_credentials.json"}}
+[debug] [2022-04-09T21:13:57.212Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todo-e0f41/adminSdkConfig [none]
+[debug] [2022-04-09T21:13:57.377Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todo-e0f41/adminSdkConfig 200
+[debug] [2022-04-09T21:13:57.377Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todo-e0f41/adminSdkConfig {"projectId":"todo-e0f41","databaseURL":"https://todo-e0f41-default-rtdb.firebaseio.com","storageBucket":"todo-e0f41.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "/home/juliob/programs/todo-app/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/juliob/programs/todo-app/functions\" for Cloud Functions..."}}
+[debug] [2022-04-09T21:13:57.389Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-04-09T21:13:58.269Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "firebase": "^9.6.10",
+    "firebase-admin": "^10.0.2",
+    "firebase-auth": "^0.1.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-04-09T21:13:58.270Z] Building nodejs source
+[debug] [2022-04-09T21:13:58.270Z] Analyzing nodejs backend spec
+[info] ✔  functions[us-central1-api]: http function initialized (http://localhost:5000/todo-e0f41/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/todo-e0f41/us-central1/api)."}}
+[debug] [2022-04-09T21:14:07.699Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-04-09T21:14:07.700Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-04-09T21:14:07.700Z] Accepted request POST /todo-e0f41/us-central1/api/signup --> us-central1-api
+[debug] [2022-04-09T21:14:07.702Z] Failed to validate key apiKey: Error: Key apiKey must start with an uppercase ASCII letter or underscore, and then consist of uppercase ASCII letters, digits, and underscores.
+[debug] [2022-04-09T21:14:07.702Z] Failed to load local environment variablesFailed to load environment variables from .env. {"name":"FirebaseError","children":[{"key":"apiKey"}],"exit":2,"message":"Failed to load environment variables from .env.","status":500}
+[debug] [2022-04-09T21:14:07.709Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-04-09T21:14:07.709Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-04-09T21:14:07.709Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-04-09T21:14:07.710Z] [worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: Assigning socketPath: /tmp/fire_emu_1186.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: Assigning socketPath: /tmp/fire_emu_1186.sock"}}
+[debug] [2022-04-09T21:14:07.710Z] [worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: BUSY"}}
+[debug] [2022-04-09T21:14:08.306Z] [runtime-status] [1186] Functions runtime initialized. {"cwd":"/home/juliob/programs/todo-app/functions","node_version":"17.8.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Functions runtime initialized. {\"cwd\":\"/home/juliob/programs/todo-app/functions\",\"node_version\":\"17.8.0\"}"}}
+[debug] [2022-04-09T21:14:08.307Z] [runtime-status] [1186] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Disabled runtime features: undefined"}}
+[debug] [2022-04-09T21:14:08.308Z] [runtime-status] [1186] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:08.309Z] [runtime-status] [1186] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:08.309Z] [runtime-status] [1186] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-04-09T21:14:08.310Z] [runtime-status] [1186] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:08.331Z] [runtime-status] [1186] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-04-09T21:14:08.332Z] [runtime-status] [1186] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-04-09T21:14:08.332Z] [runtime-status] [1186] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:08.333Z] [runtime-status] [1186] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:08.333Z] [runtime-status] [1186] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:08.333Z] [runtime-status] [1186] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-04-09T21:14:08.366Z] [runtime-status] [1186] initializeApp(DEFAULT) {"storageBucket":"todo-e0f41.appspot.com","databaseURL":"https://todo-e0f41-default-rtdb.firebaseio.com","projectId":"todo-e0f41"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] initializeApp(DEFAULT) {\"storageBucket\":\"todo-e0f41.appspot.com\",\"databaseURL\":\"https://todo-e0f41-default-rtdb.firebaseio.com\",\"projectId\":\"todo-e0f41\"}"}}
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2022-04-09T21:14:08.403Z] [runtime-status] [1186] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-04-09T21:14:08.404Z] [runtime-status] [1186] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Running api in signature http"}}
+[debug] [2022-04-09T21:14:08.406Z] [runtime-status] [1186] Attempting to listen to socketPath: /tmp/fire_emu_1186.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Attempting to listen to socketPath: /tmp/fire_emu_1186.sock"}}
+[debug] [2022-04-09T21:14:08.412Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-04-09T21:14:08.412Z] [functions] Got req.url=/todo-e0f41/us-central1/api/signup, mapping to path=/signup {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/todo-e0f41/us-central1/api/signup, mapping to path=/signup"}}
+[debug] [2022-04-09T21:14:08.427Z] [runtime-status] [1186] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Ephemeral server handling POST request"}}
+[debug] [2022-04-09T21:14:08.431Z] [runtime-status] [1186] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1186] Ephemeral server survived."}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[info] >  /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:508 {"user":"/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:508","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:508"}}
+[info] >      return _DEFAULT_AUTH_ERROR_FACTORY.create.apply(_DEFAULT_AUTH_ERROR_FACTORY, tslib.__spreadArray([authOrCode], rest)); {"user":"    return _DEFAULT_AUTH_ERROR_FACTORY.create.apply(_DEFAULT_AUTH_ERROR_FACTORY, tslib.__spreadArray([authOrCode], rest));","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     return _DEFAULT_AUTH_ERROR_FACTORY.create.apply(_DEFAULT_AUTH_ERROR_FACTORY, tslib.__spreadArray([authOrCode], rest));"}}
+[info] >                                                ^ {"user":"                                              ^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m                                               ^"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  FirebaseError: Firebase: Error (auth/invalid-api-key). {"user":"FirebaseError: Firebase: Error (auth/invalid-api-key).","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m FirebaseError: Firebase: Error (auth/invalid-api-key)."}}
+[info] >      at createErrorInternal (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:508:47) {"user":"    at createErrorInternal (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:508:47)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at createErrorInternal (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:508:47)"}}
+[info] >      at _assert (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:516:35) {"user":"    at _assert (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:516:35)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at _assert (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:516:35)"}}
+[info] >      at /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7016:13 {"user":"    at /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7016:13","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7016:13"}}
+[info] >      at Component.instanceFactory (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7033:11) {"user":"    at Component.instanceFactory (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7033:11)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Component.instanceFactory (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7033:11)"}}
+[info] >      at Provider.getOrInitializeService (/home/juliob/programs/todo-app/functions/node_modules/@firebase/component/dist/index.cjs.js:342:39) {"user":"    at Provider.getOrInitializeService (/home/juliob/programs/todo-app/functions/node_modules/@firebase/component/dist/index.cjs.js:342:39)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Provider.getOrInitializeService (/home/juliob/programs/todo-app/functions/node_modules/@firebase/component/dist/index.cjs.js:342:39)"}}
+[info] >      at Provider.initialize (/home/juliob/programs/todo-app/functions/node_modules/@firebase/component/dist/index.cjs.js:264:29) {"user":"    at Provider.initialize (/home/juliob/programs/todo-app/functions/node_modules/@firebase/component/dist/index.cjs.js:264:29)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Provider.initialize (/home/juliob/programs/todo-app/functions/node_modules/@firebase/component/dist/index.cjs.js:264:29)"}}
+[info] >      at initializeAuth (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:630:25) {"user":"    at initializeAuth (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:630:25)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at initializeAuth (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:630:25)"}}
+[info] >      at getAuth (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7083:12) {"user":"    at getAuth (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7083:12)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at getAuth (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:7083:12)"}}
+[info] >      at signUpUser (/home/juliob/programs/todo-app/functions/lib/APIs/users.js:52:37) {"user":"    at signUpUser (/home/juliob/programs/todo-app/functions/lib/APIs/users.js:52:37)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at signUpUser (/home/juliob/programs/todo-app/functions/lib/APIs/users.js:52:37)"}}
+[info] >      at processTicksAndRejections (node:internal/process/task_queues:96:5) { {"user":"    at processTicksAndRejections (node:internal/process/task_queues:96:5) {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at processTicksAndRejections (node:internal/process/task_queues:96:5) {"}}
+[info] >    code: 'auth/invalid-api-key', {"user":"  code: 'auth/invalid-api-key',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   code: 'auth/invalid-api-key',"}}
+[info] >    customData: { appName: '[DEFAULT]' } {"user":"  customData: { appName: '[DEFAULT]' }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   customData: { appName: '[DEFAULT]' }"}}
+[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  Node.js v17.8.0 {"user":"Node.js v17.8.0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Node.js v17.8.0"}}
+[debug] [2022-04-09T21:14:09.020Z] [worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: exited"}}
+[debug] [2022-04-09T21:14:09.020Z] [worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-428c20e6-4a8a-4df0-899d-61567dd2a093]: FINISHED"}}
+[debug] [2022-04-09T21:14:09.021Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-04-09T21:14:30.159Z] File /home/juliob/programs/todo-app/functions/src/util/admin.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/src/util/admin.ts changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:31.160Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-04-09T21:14:31.936Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "firebase": "^9.6.10",
+    "firebase-admin": "^10.0.2",
+    "firebase-auth": "^0.1.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-04-09T21:14:31.936Z] Building nodejs source
+[debug] [2022-04-09T21:14:31.936Z] Analyzing nodejs backend spec
+[debug] [2022-04-09T21:14:45.789Z] File /home/juliob/programs/todo-app/functions/src/util/admin.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/src/util/admin.ts changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:46.168Z] File /home/juliob/programs/todo-app/functions/lib/util/admin.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/lib/util/admin.js.map changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:46.169Z] File /home/juliob/programs/todo-app/functions/lib/util/admin.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/lib/util/admin.js changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:47.170Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-04-09T21:14:48.068Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "firebase": "^9.6.10",
+    "firebase-admin": "^10.0.2",
+    "firebase-auth": "^0.1.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-04-09T21:14:48.068Z] Building nodejs source
+[debug] [2022-04-09T21:14:48.068Z] Analyzing nodejs backend spec
+[debug] [2022-04-09T21:14:48.073Z] File /home/juliob/programs/todo-app/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:48.179Z] File /home/juliob/programs/todo-app/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:48.179Z] File /home/juliob/programs/todo-app/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:49.182Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-04-09T21:14:49.920Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "firebase": "^9.6.10",
+    "firebase-admin": "^10.0.2",
+    "firebase-auth": "^0.1.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-04-09T21:14:49.920Z] Building nodejs source
+[debug] [2022-04-09T21:14:49.920Z] Analyzing nodejs backend spec
+[debug] [2022-04-09T21:14:49.926Z] File /home/juliob/programs/todo-app/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:50.145Z] File /home/juliob/programs/todo-app/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:50.146Z] File /home/juliob/programs/todo-app/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/juliob/programs/todo-app/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-04-09T21:14:51.148Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-04-09T21:14:51.997Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "firebase": "^9.6.10",
+    "firebase-admin": "^10.0.2",
+    "firebase-auth": "^0.1.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-04-09T21:14:51.997Z] Building nodejs source
+[debug] [2022-04-09T21:14:51.997Z] Analyzing nodejs backend spec
+[debug] [2022-04-09T21:14:53.526Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-04-09T21:14:53.526Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-04-09T21:14:53.526Z] Accepted request POST /todo-e0f41/us-central1/api/signup --> us-central1-api
+[debug] [2022-04-09T21:14:53.526Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2022-04-09T21:14:53.527Z] Failed to validate key apiKey: Error: Key apiKey must start with an uppercase ASCII letter or underscore, and then consist of uppercase ASCII letters, digits, and underscores.
+[debug] [2022-04-09T21:14:53.527Z] Failed to load local environment variablesFailed to load environment variables from .env. {"name":"FirebaseError","children":[{"key":"apiKey"}],"exit":2,"message":"Failed to load environment variables from .env.","status":500}
+[debug] [2022-04-09T21:14:53.532Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-04-09T21:14:53.533Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-04-09T21:14:53.533Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-04-09T21:14:53.533Z] [worker-us-central1-api-a3a352c0-ed54-4b06-99ee-443ccab009e9]: Assigning socketPath: /tmp/fire_emu_1420.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a3a352c0-ed54-4b06-99ee-443ccab009e9]: Assigning socketPath: /tmp/fire_emu_1420.sock"}}
+[debug] [2022-04-09T21:14:53.533Z] [worker-us-central1-api-a3a352c0-ed54-4b06-99ee-443ccab009e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a3a352c0-ed54-4b06-99ee-443ccab009e9]: BUSY"}}
+[debug] [2022-04-09T21:14:54.099Z] [runtime-status] [1420] Functions runtime initialized. {"cwd":"/home/juliob/programs/todo-app/functions","node_version":"17.8.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Functions runtime initialized. {\"cwd\":\"/home/juliob/programs/todo-app/functions\",\"node_version\":\"17.8.0\"}"}}
+[debug] [2022-04-09T21:14:54.101Z] [runtime-status] [1420] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Disabled runtime features: undefined"}}
+[debug] [2022-04-09T21:14:54.102Z] [runtime-status] [1420] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:54.103Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:54.103Z] [runtime-status] [1420] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-04-09T21:14:54.103Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:54.125Z] [runtime-status] [1420] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-04-09T21:14:54.125Z] [runtime-status] [1420] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-04-09T21:14:54.126Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:54.127Z] [runtime-status] [1420] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:54.127Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-04-09T21:14:54.127Z] [runtime-status] [1420] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/home/juliob/programs/todo-app/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-04-09T21:14:54.161Z] [runtime-status] [1420] initializeApp(DEFAULT) {"storageBucket":"todo-e0f41.appspot.com","databaseURL":"https://todo-e0f41-default-rtdb.firebaseio.com","projectId":"todo-e0f41"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] initializeApp(DEFAULT) {\"storageBucket\":\"todo-e0f41.appspot.com\",\"databaseURL\":\"https://todo-e0f41-default-rtdb.firebaseio.com\",\"projectId\":\"todo-e0f41\"}"}}
+[debug] [2022-04-09T21:14:54.194Z] [runtime-status] [1420] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-04-09T21:14:54.195Z] [runtime-status] [1420] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Running api in signature http"}}
+[debug] [2022-04-09T21:14:54.197Z] [runtime-status] [1420] Attempting to listen to socketPath: /tmp/fire_emu_1420.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Attempting to listen to socketPath: /tmp/fire_emu_1420.sock"}}
+[debug] [2022-04-09T21:14:54.203Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-04-09T21:14:54.203Z] [functions] Got req.url=/todo-e0f41/us-central1/api/signup, mapping to path=/signup {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/todo-e0f41/us-central1/api/signup, mapping to path=/signup"}}
+[debug] [2022-04-09T21:14:54.214Z] [runtime-status] [1420] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Ephemeral server handling POST request"}}
+[debug] [2022-04-09T21:14:54.217Z] [runtime-status] [1420] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1420] Ephemeral server survived."}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[warn] ⚠  Google API requested!
+   - URL: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCEZn5hSntHlsLhgaS_JToxKmz0Ctiwy08"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCEZn5hSntHlsLhgaS_JToxKmz0Ctiwy08\"\n   - Be careful, this may be a production service."}}
+[info] >  FirebaseError: Firebase: Error (auth/email-already-in-use). {"user":"FirebaseError: Firebase: Error (auth/email-already-in-use).","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m FirebaseError: Firebase: Error (auth/email-already-in-use)."}}
+[info] >      at createErrorInternal (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:506:55) {"user":"    at createErrorInternal (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:506:55)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at createErrorInternal (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:506:55)"}}
+[info] >      at _createError (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:484:32) {"user":"    at _createError (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:484:32)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at _createError (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:484:32)"}}
+[info] >      at _makeTaggedError (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:1110:17) {"user":"    at _makeTaggedError (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:1110:17)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at _makeTaggedError (/home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:1110:17)"}}
+[info] >      at /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:1029:35 {"user":"    at /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:1029:35","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at /home/juliob/programs/todo-app/functions/node_modules/@firebase/auth/dist/node/index-cb44b87a.js:1029:35"}}
+[info] >      at step (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:143:27) {"user":"    at step (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:143:27)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at step (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:143:27)"}}
+[info] >      at Object.next (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:124:57) {"user":"    at Object.next (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:124:57)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at Object.next (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:124:57)"}}
+[info] >      at fulfilled (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:114:62) {"user":"    at fulfilled (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:114:62)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at fulfilled (/home/juliob/programs/todo-app/functions/node_modules/tslib/tslib.js:114:62)"}}
+[info] >      at processTicksAndRejections (node:internal/process/task_queues:96:5) { {"user":"    at processTicksAndRejections (node:internal/process/task_queues:96:5) {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     at processTicksAndRejections (node:internal/process/task_queues:96:5) {"}}
+[info] >    code: 'auth/email-already-in-use', {"user":"  code: 'auth/email-already-in-use',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   code: 'auth/email-already-in-use',"}}
+[info] >    customData: { appName: '[DEFAULT]', _tokenResponse: { error: [Object] } } {"user":"  customData: { appName: '[DEFAULT]', _tokenResponse: { error: [Object] } }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   customData: { appName: '[DEFAULT]', _tokenResponse: { error: [Object] } }"}}
+[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-04-09T21:14:55.045Z] [worker-us-central1-api-a3a352c0-ed54-4b06-99ee-443ccab009e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a3a352c0-ed54-4b06-99ee-443ccab009e9]: IDLE"}}
+[debug] [2022-04-09T21:14:55.045Z] [work-queue] {"queueLength":0,"workRunningCount":0}

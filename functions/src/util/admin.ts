@@ -1,8 +1,12 @@
 import * as admin from "firebase-admin";
 
+/* Used to get the API key from .env */
+import * as dotenv from "dotenv";
+dotenv.config();
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCEZn5hSntHlsLhgaS_JToxKmz0Ctiwy08",
+  apiKey: process.env.apiKey,
   authDomain: "todo-e0f41.firebaseapp.com",
   databaseURL: "https://todo-e0f41-default-rtdb.firebaseio.com",
   projectId: "todo-e0f41",

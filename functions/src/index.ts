@@ -2,7 +2,7 @@ import * as functions from "firebase-functions";
 import * as app from "express";
 
 import {getAllTodos, postOneTodo, deleteTodo, editTodo} from "./APIs/todos";
-import {loginUser} from "./APIs/users";
+import {loginUser, signUpUser} from "./APIs/users";
 
 
 // // Start writing Firebase Functions
@@ -17,6 +17,7 @@ webApp.get("/todos", getAllTodos);
 
 webApp.post("/todo", postOneTodo);
 webApp.post("/login", loginUser);
+webApp.post("/signup", signUpUser);
 
 webApp.delete("/delete/:id", deleteTodo);
 webApp.put("/edit/:id", editTodo);
